@@ -20,7 +20,7 @@ function multiply(num1, operator, num2) {
 
 
 function hasPets(hasPet, firstName, lastName) {
-  if (hasPet === "true") {
+  if (hasPet === true) {
     return firstName + " " + lastName + " really does have a nice pet";
   } else {
     return firstName + " " + lastName + " " + "has no pets";
@@ -35,7 +35,7 @@ let myAccountNumbers = {
 };
 
 function addsBalanceOfAccounts( firstAccount, secondAccount ) {
-   firstAccount = myAccountNumbers["account1"];
+   firstAccount = myAccountNumbers["account2"];
    secondAccount = myAccountNumbers["account3"];
   return firstAccount + secondAccount;
 }
@@ -43,23 +43,22 @@ function addsBalanceOfAccounts( firstAccount, secondAccount ) {
 function calculator(firstNumber, operator, secondNumber) {
   if (operator === "+") {
     let answer = firstNumber + secondNumber;
-    return;
+    return answer;
   }
   if (operator === "-") {
     let answer = firstNumber - secondNumber;
-    return;
+    return answer;
   }
   if (operator === "*") {
     let answer = firstNumber * secondNumber;
-    return;
+    return answer;
   }
   if (operator === "/") {
     let answer = firstNumber / secondNumber;
-    return;
+    return answer;
   } else {
     let answer = "Invalid inputs. Try again!";
-    return;
-    answer;
+    return answer;    
   }
 }
 
@@ -68,10 +67,11 @@ add(2, 5);
 multiply(5, "*", 10);
 hasPets(true, "henry", "ford");
 hasPets(false, "henry", "ford");
+addsBalanceOfAccounts();
 calculator(2, "+", 2);
 calculator(5, "-", 3);
 calculator(3, "*", 4);
 calculator(15, "/", 3);
-addsBalanceOfAccounts();
+
 
 module.exports = { add, multiply, hasPets, addsBalanceOfAccounts, calculator };
